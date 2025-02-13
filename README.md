@@ -102,4 +102,4 @@ Or simply open **index.html** in a browser if the project is **frontend-only**.
 Contributions are welcome!
 
 Feel free to open an **issue** or submit a **pull request**.
-# FULLSTACK-train_ticket
+
