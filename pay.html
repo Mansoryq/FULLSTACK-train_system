@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Платежная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .payment-container {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            width: 350px;
+        }
+        .payment-methods button, .pay-btn, .class-btn {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .apple-pay {
+            background: #fff;
+            color: black;
+        }
+        .class-btn {
+            background: #007bff;
+            color: white;
+        }
+        .card-payment input {
+            display: block;
+            width: calc(100% - 20px);
+            margin: 10px auto;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        .pay-btn {
+            background: #ffcc00;
+            color: black;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="payment-container">
+        <h2>PAYMENT SYSTEM</h2>
+        <div class="payment-methods">
+            <button class="apple-pay">Карта</button>
+            <div class="card-payment">
+                <label>Карта (Visa / Mastercard)</label>
+                <input type="text" placeholder="0000 0000 0000 0000">
+                <input type="text" placeholder="MM / YY">
+                <input type="text" placeholder="CVC">
+            </div>
+        </div>
+        <div class="class-selection">
+            <button class="class-btn" onclick="updatePrice('7 435,00 ₸')">Сидячее</button>
+            <button class="class-btn" onclick="updatePrice('17 143,00 ₸')">Плацкарт</button>
+            <button class="class-btn" onclick="updatePrice('29 999,00 ₸')">Люкс</button>
+        </div>
+        <div class="payment-summary">
+            <h3>Оплата места от <span>TABDRN</span></h3>
+            <p class="amount" id="price">0 ₸</p>
+            <button class="pay-btn">Оплатить</button>
+            <p>Нажимая "оплатить", я принимаю <a href="#">Условия оплаты TABDRN</a></p>
+        </div>
+    </div>
+    <script>
+        function updatePrice(price) {
+            document.getElementById('price').textContent = price;
+        }
+        document.querySelector('.pay-btn').addEventListener('click', function() {
+            alert('Оплата успешно выполнена!');
+            window.location.href = 'file.html';
+        });
+    </script>
+</body>
+</html>

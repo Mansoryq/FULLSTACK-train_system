@@ -1,0 +1,1812 @@
+/*!
+ * # Semantic UI - Transition
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.transition {
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-fill-mode: both
+}
+
+.animating.transition {
+    backface-visibility: hidden;
+    visibility: visible !important
+}
+
+.loading.transition {
+    position: absolute;
+    top: -99999px;
+    left: -99999px
+}
+
+.hidden.transition {
+    display: none;
+    visibility: hidden
+}
+
+.visible.transition {
+    display: block !important;
+    visibility: visible !important
+}
+
+.disabled.transition {
+    animation-play-state: paused
+}
+
+.looping.transition {
+    animation-iteration-count: infinite
+}
+
+/*!
+ * # Semantic UI - Dimmer
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.dimmable:not(body) {
+    position: relative
+}
+
+.ui.dimmer {
+    display: none;
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, .85);
+    opacity: 0;
+    line-height: 1.4285em;
+    animation-fill-mode: both;
+    animation-duration: .5s;
+    transition: "ktj";
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    will-change: opacity;
+    z-index: 1001
+}
+
+.ui.dimmer>.content {
+    user-select: text;
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.segment>.ui.dimmer {
+    border-radius: inherit !important
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, .25)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, .15)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, .35)
+}
+
+.animating.dimmable:not(body),
+.dimmed.dimmable:not(body) {
+    overflow: hidden
+}
+
+.dimmed.dimmable>.ui.animating.dimmer,
+.dimmed.dimmable>.ui.visible.dimmer,
+.ui.active.dimmer {
+    display: flex;
+    opacity: 1
+}
+
+.ui.disabled.dimmer {
+    width: 0 !important;
+    height: 0 !important
+}
+
+.dimmed.dimmable>.ui.animating.legacy.dimmer,
+.dimmed.dimmable>.ui.visible.legacy.dimmer,
+.ui.active.legacy.dimmer {
+    display: block
+}
+
+.ui[class*="top aligned"].dimmer {
+    justify-content: flex-start
+}
+
+.ui[class*="bottom aligned"].dimmer {
+    justify-content: flex-end
+}
+
+.ui.page.dimmer {
+    position: fixed;
+    transform-style: "";
+    perspective: 2000px;
+    transform-origin: center center
+}
+
+body.animating.in.dimmable,
+body.dimmed.dimmable {
+    overflow: hidden
+}
+
+body.dimmable>.dimmer {
+    position: fixed
+}
+
+.blurring.dimmable>:not(.dimmer) {
+    filter: blur(0) grayscale(0);
+    transition: filter .8s ease
+}
+
+.blurring.dimmed.dimmable>:not(.dimmer) {
+    filter: blur(5px) grayscale(.7)
+}
+
+.blurring.dimmable>.dimmer {
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.blurring.dimmable>.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .6)
+}
+
+.ui.dimmer>.top.aligned.content>* {
+    vertical-align: top
+}
+
+.ui.dimmer>.bottom.aligned.content>* {
+    vertical-align: bottom
+}
+
+.ui.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .85)
+}
+
+.ui.inverted.dimmer>.content>* {
+    color: hsla(0, 0%, 100%, .9)
+}
+
+.ui.simple.dimmer {
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    width: 0;
+    height: 0%;
+    z-index: -100;
+    background-color: transparent
+}
+
+.dimmed.dimmable>.ui.simple.dimmer {
+    overflow: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1
+}
+
+.ui.simple.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, 0)
+}
+
+.dimmed.dimmable>.ui.simple.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .85)
+}
+
+/*!
+ * # Semantic UI - Modal
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.modal {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+    text-align: left;
+    background: #fff;
+    border: none;
+    box-shadow: 1px 3px 3px 0 rgba(0, 0, 0, .2), 1px 3px 15px 2px rgba(0, 0, 0, .2);
+    transform-origin: 50% 25%;
+    flex: 0 0 auto;
+    border-radius: 0;
+    user-select: text;
+    will-change: top, left, margin, transform, opacity
+}
+
+.ui.modal>.icon:first-child+*,
+.ui.modal>:first-child:not(.icon) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+.ui.modal>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.ui.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    top: -2.5rem;
+    right: -2.5rem;
+    z-index: 1;
+    opacity: .8;
+    font-size: 1.25em;
+    color: #fff;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: .625rem 0 0
+}
+
+.ui.modal>.close:hover {
+    opacity: 1
+}
+
+.ui.modal>.header {
+    display: block;
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+    background: #fff;
+    margin: 0;
+    padding: 1.25rem 1.5rem;
+    box-shadow: none;
+    color: rgba(0, 0, 0, .85);
+    border-bottom: 1px solid rgba(34, 36, 38, .15)
+}
+
+.ui.modal>.header:not(.ui) {
+    font-size: 1.42857143rem;
+    line-height: 1.28571429em;
+    font-weight: 700
+}
+
+.ui.modal>.content {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 1.5rem;
+    background: #fff
+}
+
+.ui.modal>.image.content {
+    display: flex;
+    flex-direction: row
+}
+
+.ui.modal>.content>.image {
+    display: block;
+    flex: 0 1 auto;
+    width: "";
+    align-self: top
+}
+
+.ui.modal>[class*="top aligned"] {
+    align-self: top
+}
+
+.ui.modal>[class*="middle aligned"] {
+    align-self: middle
+}
+
+.ui.modal>[class*=stretched] {
+    align-self: stretch
+}
+
+.ui.modal>.content>.description {
+    display: block;
+    flex: 1 0 auto;
+    min-width: 0;
+    align-self: top
+}
+
+.ui.modal>.content>.icon+.description,
+.ui.modal>.content>.image+.description {
+    flex: 0 1 auto;
+    min-width: "";
+    width: auto;
+    padding-left: 2em
+}
+
+.ui.modal>.content>.image>i.icon {
+    margin: 0;
+    opacity: 1;
+    width: auto;
+    line-height: 1;
+    font-size: 8rem
+}
+
+.ui.modal>.actions {
+    background: #f9fafb;
+    padding: 1rem;
+    border-top: 1px solid rgba(34, 36, 38, .15);
+    text-align: right
+}
+
+.ui.modal .actions>.button {
+    margin-left: .75em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.modal {
+        width: 88%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.modal {
+        width: 850px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.modal {
+        width: 900px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.modal {
+        width: 950px;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .ui.modal>.header {
+        padding-right: 2.25rem
+    }
+
+    .ui.modal>.close {
+        top: 1.0535rem;
+        right: 1rem;
+        color: rgba(0, 0, 0, .87)
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .ui.modal>.header {
+        padding: .75rem 2.25rem .75rem 1rem !important
+    }
+
+    .ui.modal>.content {
+        display: block;
+        padding: 1rem !important
+    }
+
+    .ui.modal>.close {
+        top: .5rem !important;
+        right: .5rem !important
+    }
+
+    .ui.modal .image.content {
+        flex-direction: column
+    }
+
+    .ui.modal .content>.image {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto !important;
+        text-align: center;
+        padding: 0 0 1rem !important
+    }
+
+    .ui.modal>.content>.image>i.icon {
+        font-size: 5rem;
+        text-align: center
+    }
+
+    .ui.modal .content>.description {
+        display: block;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem 0 !important;
+        box-shadow: none
+    }
+
+    .ui.modal>.actions {
+        padding: 1rem 1rem 0 !important
+    }
+
+    .ui.modal .actions>.button,
+    .ui.modal .actions>.buttons {
+        margin-bottom: 1rem
+    }
+}
+
+.ui.inverted.dimmer>.ui.modal {
+    box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, .2)
+}
+
+.ui.basic.modal {
+    border: none;
+    border-radius: 0;
+    box-shadow: none !important;
+    color: #fff
+}
+
+.ui.basic.modal,
+.ui.basic.modal>.actions,
+.ui.basic.modal>.content,
+.ui.basic.modal>.header {
+    background-color: transparent
+}
+
+.ui.basic.modal>.header {
+    color: #fff
+}
+
+.ui.basic.modal>.close {
+    top: 1rem;
+    right: 1.5rem
+}
+
+.ui.inverted.dimmer>.basic.modal {
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.inverted.dimmer>.ui.basic.modal>.header {
+    color: rgba(0, 0, 0, .85)
+}
+
+.ui.legacy.modal,
+.ui.legacy.page.dimmer>.ui.modal {
+    top: 50%;
+    left: 50%
+}
+
+.ui.legacy.page.dimmer>.ui.scrolling.modal,
+.ui.page.dimmer>.ui.scrolling.legacy.modal,
+.ui.top.aligned.dimmer>.ui.legacy.modal,
+.ui.top.aligned.legacy.page.dimmer>.ui.modal {
+    top: auto
+}
+
+@media only screen and (max-width:991px) {
+    .ui.basic.modal>.close {
+        color: #fff
+    }
+}
+
+.ui.loading.modal {
+    display: block;
+    visibility: hidden;
+    z-index: -1
+}
+
+.ui.active.modal {
+    display: block
+}
+
+.modals.dimmer[class*="top aligned"] .modal {
+    margin: 5vh auto
+}
+
+@media only screen and (max-width:767px) {
+    .modals.dimmer[class*="top aligned"] .modal {
+        margin: 1rem auto
+    }
+}
+
+.legacy.modals.dimmer[class*="top aligned"] {
+    padding-top: 5vh
+}
+
+@media only screen and (max-width:767px) {
+    .legacy.modals.dimmer[class*="top aligned"] {
+        padding-top: 1rem
+    }
+}
+
+.scrolling.dimmable.dimmed {
+    overflow: hidden
+}
+
+.scrolling.dimmable>.dimmer {
+    justify-content: flex-start
+}
+
+.scrolling.dimmable.dimmed>.dimmer {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrolling.dimmable>.dimmer {
+    position: fixed
+}
+
+.modals.dimmer .ui.scrolling.modal {
+    margin: 1rem auto
+}
+
+.scrolling.undetached.dimmable.dimmed {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrolling.undetached.dimmable.dimmed>.dimmer {
+    overflow: hidden
+}
+
+.scrolling.undetached.dimmable .ui.scrolling.modal {
+    position: absolute;
+    left: 50%;
+    margin-top: 1rem !important
+}
+
+.ui.modal .scrolling.content {
+    max-height: calc(80vh - 10em);
+    overflow: auto
+}
+
+.ui.fullscreen.modal {
+    width: 95% !important;
+    margin: 1em auto
+}
+
+.ui.fullscreen.modal>.header {
+    padding-right: 2.25rem
+}
+
+.ui.fullscreen.modal>.close {
+    top: 1.0535rem;
+    right: 1rem;
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.modal {
+    font-size: 1rem
+}
+
+.ui.mini.modal>.header:not(.ui) {
+    font-size: 1.3em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.mini.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.mini.modal {
+        width: 35.2%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.mini.modal {
+        width: 340px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.mini.modal {
+        width: 360px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.mini.modal {
+        width: 380px;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .ui.tiny.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.tiny.modal {
+        width: 52.8%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.tiny.modal {
+        width: 510px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.tiny.modal {
+        width: 540px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.tiny.modal {
+        width: 570px;
+        margin: 0
+    }
+}
+
+.ui.small.modal>.header:not(.ui) {
+    font-size: 1.3em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.small.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.small.modal {
+        width: 70.4%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.small.modal {
+        width: 680px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.small.modal {
+        width: 720px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.small.modal {
+        width: 760px;
+        margin: 0
+    }
+}
+
+.ui.large.modal>.header {
+    font-size: 1.6em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.large.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.large.modal {
+        width: 88%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.large.modal {
+        width: 1020px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.large.modal {
+        width: 1080px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.large.modal {
+        width: 1140px;
+        margin: 0
+    }
+}
+
+.transition.browse {
+    animation-duration: .5s
+}
+
+.transition.browse.in {
+    animation-name: browseIn
+}
+
+.transition.browse.left.out,
+.transition.browse.out {
+    animation-name: browseOutLeft
+}
+
+.transition.browse.right.out {
+    animation-name: browseOutRight
+}
+
+@keyframes browseIn {
+    0% {
+        transform: scale(.8) translateZ(0);
+        z-index: -1
+    }
+
+    10% {
+        transform: scale(.8) translateZ(0);
+        z-index: -1;
+        opacity: .7
+    }
+
+    80% {
+        transform: scale(1.05) translateZ(0);
+        opacity: 1;
+        z-index: 999
+    }
+
+    to {
+        transform: scale(1) translateZ(0);
+        z-index: 999
+    }
+}
+
+@keyframes browseOutLeft {
+    0% {
+        z-index: 999;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg)
+    }
+
+    50% {
+        z-index: -1;
+        transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        z-index: -1;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg) translateZ(-10px);
+        opacity: 0
+    }
+}
+
+@keyframes browseOutRight {
+    0% {
+        z-index: 999;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg)
+    }
+
+    50% {
+        z-index: 1;
+        transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        z-index: 1;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg) translateZ(-10px);
+        opacity: 0
+    }
+}
+
+.drop.transition {
+    transform-origin: top center;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.34, 1.61, .7, 1)
+}
+
+.drop.transition.in {
+    animation-name: dropIn
+}
+
+.drop.transition.out {
+    animation-name: dropOut
+}
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes dropOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0)
+    }
+}
+
+.transition.fade.in {
+    animation-name: fadeIn
+}
+
+.transition[class*="fade up"].in {
+    animation-name: fadeInUp
+}
+
+.transition[class*="fade down"].in {
+    animation-name: fadeInDown
+}
+
+.transition[class*="fade left"].in {
+    animation-name: fadeInLeft
+}
+
+.transition[class*="fade right"].in {
+    animation-name: fadeInRight
+}
+
+.transition.fade.out {
+    animation-name: fadeOut
+}
+
+.transition[class*="fade up"].out {
+    animation-name: fadeOutUp
+}
+
+.transition[class*="fade down"].out {
+    animation-name: fadeOutDown
+}
+
+.transition[class*="fade left"].out {
+    animation-name: fadeOutLeft
+}
+
+.transition[class*="fade right"].out {
+    animation-name: fadeOutRight
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(5%)
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-5%)
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(5%)
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-5%)
+    }
+}
+
+.flip.transition.in,
+.flip.transition.out {
+    animation-duration: .6s
+}
+
+.horizontal.flip.transition.in {
+    animation-name: horizontalFlipIn
+}
+
+.horizontal.flip.transition.out {
+    animation-name: horizontalFlipOut
+}
+
+.vertical.flip.transition.in {
+    animation-name: verticalFlipIn
+}
+
+.vertical.flip.transition.out {
+    animation-name: verticalFlipOut
+}
+
+@keyframes horizontalFlipIn {
+    0% {
+        transform: perspective(2000px) rotateY(-90deg);
+        opacity: 0
+    }
+
+    to {
+        transform: perspective(2000px) rotateY(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes verticalFlipIn {
+    0% {
+        transform: perspective(2000px) rotateX(-90deg);
+        opacity: 0
+    }
+
+    to {
+        transform: perspective(2000px) rotateX(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes horizontalFlipOut {
+    0% {
+        transform: perspective(2000px) rotateY(0deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(2000px) rotateY(90deg);
+        opacity: 0
+    }
+}
+
+@keyframes verticalFlipOut {
+    0% {
+        transform: perspective(2000px) rotateX(0deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(2000px) rotateX(-90deg);
+        opacity: 0
+    }
+}
+
+.scale.transition.in {
+    animation-name: scaleIn
+}
+
+.scale.transition.out {
+    animation-name: scaleOut
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(.8)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.9)
+    }
+}
+
+.transition.fly {
+    animation-duration: .6s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+}
+
+.transition.fly.in {
+    animation-name: flyIn
+}
+
+.transition[class*="fly up"].in {
+    animation-name: flyInUp
+}
+
+.transition[class*="fly down"].in {
+    animation-name: flyInDown
+}
+
+.transition[class*="fly left"].in {
+    animation-name: flyInLeft
+}
+
+.transition[class*="fly right"].in {
+    animation-name: flyInRight
+}
+
+.transition.fly.out {
+    animation-name: flyOut
+}
+
+.transition[class*="fly up"].out {
+    animation-name: flyOutUp
+}
+
+.transition[class*="fly down"].out {
+    animation-name: flyOutDown
+}
+
+.transition[class*="fly left"].out {
+    animation-name: flyOutLeft
+}
+
+.transition[class*="fly right"].out {
+    animation-name: flyOutRight
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}
+
+@keyframes flyInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 1500px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0)
+    }
+
+    75% {
+        transform: translate3d(0, 10px, 0)
+    }
+
+    90% {
+        transform: translate3d(0, -5px, 0)
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+@keyframes flyInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -1500px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0)
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0)
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(1500px, 0, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(-25px, 0, 0)
+    }
+
+    75% {
+        transform: translate3d(10px, 0, 0)
+    }
+
+    90% {
+        transform: translate3d(-5px, 0, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(-1500px, 0, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(25px, 0, 0)
+    }
+
+    75% {
+        transform: translate3d(-10px, 0, 0)
+    }
+
+    90% {
+        transform: translate3d(5px, 0, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyOut {
+    20% {
+        transform: scale3d(.9, .9, .9)
+    }
+
+    50%,
+    55% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+}
+
+@keyframes flyOutUp {
+    20% {
+        transform: translate3d(0, 10px, 0)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 2000px, 0)
+    }
+}
+
+@keyframes flyOutDown {
+    20% {
+        transform: translate3d(0, -10px, 0)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, -2000px, 0)
+    }
+}
+
+@keyframes flyOutRight {
+    20% {
+        opacity: 1;
+        transform: translate3d(20px, 0, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0)
+    }
+}
+
+@keyframes flyOutLeft {
+    20% {
+        opacity: 1;
+        transform: translate3d(-20px, 0, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0)
+    }
+}
+
+.transition.slide.in,
+.transition[class*="slide down"].in {
+    animation-name: slideInY;
+    transform-origin: top center
+}
+
+.transition[class*="slide up"].in {
+    animation-name: slideInY;
+    transform-origin: bottom center
+}
+
+.transition[class*="slide left"].in {
+    animation-name: slideInX;
+    transform-origin: center right
+}
+
+.transition[class*="slide right"].in {
+    animation-name: slideInX;
+    transform-origin: center left
+}
+
+.transition.slide.out,
+.transition[class*="slide down"].out {
+    animation-name: slideOutY;
+    transform-origin: top center
+}
+
+.transition[class*="slide up"].out {
+    animation-name: slideOutY;
+    transform-origin: bottom center
+}
+
+.transition[class*="slide left"].out {
+    animation-name: slideOutX;
+    transform-origin: center right
+}
+
+.transition[class*="slide right"].out {
+    animation-name: slideOutX;
+    transform-origin: center left
+}
+
+@keyframes slideInY {
+    0% {
+        opacity: 0;
+        transform: scaleY(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1)
+    }
+}
+
+@keyframes slideInX {
+    0% {
+        opacity: 0;
+        transform: scaleX(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}
+
+@keyframes slideOutY {
+    0% {
+        opacity: 1;
+        transform: scaleY(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleY(0)
+    }
+}
+
+@keyframes slideOutX {
+    0% {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleX(0)
+    }
+}
+
+.transition.swing {
+    animation-duration: .8s
+}
+
+.transition[class*="swing down"].in {
+    animation-name: swingInX;
+    transform-origin: top center
+}
+
+.transition[class*="swing up"].in {
+    animation-name: swingInX;
+    transform-origin: bottom center
+}
+
+.transition[class*="swing left"].in {
+    animation-name: swingInY;
+    transform-origin: center right
+}
+
+.transition[class*="swing right"].in {
+    animation-name: swingInY;
+    transform-origin: center left
+}
+
+.transition.swing.out,
+.transition[class*="swing down"].out {
+    animation-name: swingOutX;
+    transform-origin: top center
+}
+
+.transition[class*="swing up"].out {
+    animation-name: swingOutX;
+    transform-origin: bottom center
+}
+
+.transition[class*="swing left"].out {
+    animation-name: swingOutY;
+    transform-origin: center right
+}
+
+.transition[class*="swing right"].out {
+    animation-name: swingOutY;
+    transform-origin: center left
+}
+
+@keyframes swingInX {
+    0% {
+        transform: perspective(1000px) rotateX(90deg);
+        opacity: 0
+    }
+
+    40% {
+        transform: perspective(1000px) rotateX(-30deg);
+        opacity: 1
+    }
+
+    60% {
+        transform: perspective(1000px) rotateX(15deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateX(-7.5deg)
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+}
+
+@keyframes swingInY {
+    0% {
+        transform: perspective(1000px) rotateY(-90deg);
+        opacity: 0
+    }
+
+    40% {
+        transform: perspective(1000px) rotateY(30deg);
+        opacity: 1
+    }
+
+    60% {
+        transform: perspective(1000px) rotateY(-17.5deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateY(7.5deg)
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(0deg)
+    }
+}
+
+@keyframes swingOutX {
+    0% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+
+    40% {
+        transform: perspective(1000px) rotateX(-7.5deg)
+    }
+
+    60% {
+        transform: perspective(1000px) rotateX(17.5deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateX(-30deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(90deg);
+        opacity: 0
+    }
+}
+
+@keyframes swingOutY {
+    0% {
+        transform: perspective(1000px) rotateY(0deg)
+    }
+
+    40% {
+        transform: perspective(1000px) rotateY(7.5deg)
+    }
+
+    60% {
+        transform: perspective(1000px) rotateY(-10deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateY(30deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(-90deg);
+        opacity: 0
+    }
+}
+
+.transition.zoom.in {
+    animation-name: zoomIn
+}
+
+.transition.zoom.out {
+    animation-name: zoomOut
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 1;
+        transform: scale(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(0)
+    }
+}
+
+.flash.transition {
+    animation-duration: .75s;
+    animation-name: flash
+}
+
+.shake.transition {
+    animation-duration: .75s;
+    animation-name: shake
+}
+
+.bounce.transition {
+    animation-duration: .75s;
+    animation-name: bounce
+}
+
+.tada.transition {
+    animation-duration: .75s;
+    animation-name: tada
+}
+
+.pulse.transition {
+    animation-duration: .5s;
+    animation-name: pulse
+}
+
+.jiggle.transition {
+    animation-duration: .75s;
+    animation-name: jiggle
+}
+
+.transition.glow {
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.19, 1, .22, 1);
+    animation-name: glow
+}
+
+@keyframes flash {
+
+    0%,
+    50%,
+    to {
+        opacity: 1
+    }
+
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    to {
+        transform: translateX(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px)
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px)
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0)
+    }
+
+    40% {
+        transform: translateY(-30px)
+    }
+
+    60% {
+        transform: translateY(-15px)
+    }
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1)
+    }
+
+    10%,
+    20% {
+        transform: scale(.9) rotate(-3deg)
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1.1) rotate(3deg)
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1) rotate(-3deg)
+    }
+
+    to {
+        transform: scale(1) rotate(0)
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    50% {
+        transform: scale(.9);
+        opacity: .7
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: scaleX(1)
+    }
+
+    30% {
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+@keyframes glow {
+    0% {
+        background-color: #fcfcfd
+    }
+
+    30% {
+        background-color: #fff6cd
+    }
+
+    to {
+        background-color: #fcfcfd
+    }
+}

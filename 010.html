@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование мест в поезде 010Ц</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function showSeatInfo(seatNumber) {
+            let seatType = "";
+            if (seatNumber >= 1 && seatNumber <= 10) {
+                seatType = "Сидячее место";
+            } else if (seatNumber >= 11 && seatNumber <= 30) {
+                seatType = "Плацкарт";
+            } else if (seatNumber >= 31 && seatNumber <= 40) {
+                seatType = "Люкс";
+            }
+            
+            const infoBox = document.getElementById("seat-info");
+            infoBox.innerHTML = `
+                <div class='modal-content'>
+                    <h2>Детали бронирования</h2>
+                    <p><strong>Поезд:</strong> 010Ц</p>
+                    <p><strong>Место номер:</strong> ${seatNumber} (${seatNumber % 2 === 0 ? 'Нижнее' : 'Верхнее'})</p>
+                    <p><strong>Тип:</strong> ${seatType}</p>
+                    <button class='ui button primary' onclick='payForSeat(${seatNumber})'>Оплатить</button>
+                </div>`;
+            infoBox.style.display = "block";
+        }
+        
+        function payForSeat(seatNumber) {
+            alert(`Выберете ваш тип Класса в окошке оплаты)`);
+            document.getElementById(`seat-${seatNumber}`).style.backgroundColor = "#d3d3d3";
+            document.getElementById(`seat-${seatNumber}`).style.pointerEvents = "none";
+            window.location.href = 'pay.html';
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(0, 0, 0);
+            background-size: cover;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .seats-container {
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(20, 1fr);
+            gap: 5px;
+            justify-content: center;
+        }
+        .seat {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid black;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .seat:nth-child(odd) {
+            background: lightblue;
+        }
+        .seat:nth-child(even) {
+            background: green;
+        }
+        .seat:hover {
+            background: #e0e0e0;
+        }
+        #seat-info {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            width: 300px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            text-align: center;
+        }
+        .ui.button.primary {
+            background: #2185d0;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .ui.button.primary:hover {
+            background: #1678c2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Бронирование мест в поезде от TABDRN</h1>
+        <div class="seats-container">
+            <script>
+                for (let i = 1; i <= 40; i++) {
+                    document.write(`<div id='seat-${i}' class='seat' onclick='showSeatInfo(${i})'>${i}</div>`);
+                }
+            </script>
+        </div>
+    </div>
+    <div id="seat-info"></div>
+</body>
+</html>

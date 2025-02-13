@@ -1,0 +1,3394 @@
+tr.train.item table {
+    border-top: 0 !important
+}
+
+.train-information:hover,
+.train-route:hover {
+    cursor: pointer
+}
+
+.train.item .first-row {
+    padding-bottom: 20px;
+    padding-top: 20px
+}
+
+.train.item .first-row .train-route-container {
+    color: rgba(0, 0, 0, .6);
+    width: 70%
+}
+
+.train.item .first-row .train-route-container .train-route-title {
+    font-weight: 500
+}
+
+.train.item .first-row .train-route-container .train-route-details .train-route {
+    display: inline;
+    margin-left: 25px
+}
+
+.train.item .first-row .train-route-container .train-route-details .train-description {
+    float: right
+}
+
+.train-modal-carrier-name {
+    font-size: 15px;
+    font-weight: 700
+}
+
+.train-modal-carrier-type {
+    font-size: 14px;
+    color: #3f48cc
+}
+
+@media only screen and (min-width:300px) and (max-width:400px) {
+    .train.item .first-row .train-route-container {
+        padding: 0;
+        text-align: left;
+        width: auto
+    }
+
+    .train.item .first-row .train-route-container .train-route-details {
+        display: flex;
+        justify-content: space-between
+    }
+
+    .train.item .first-row .train-route-container .train-route-details .train-route {
+        margin-left: 0
+    }
+
+    .train.item .first-row .train-route-container .train-route-details .train-description {
+        margin-left: 10px
+    }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px) {
+    .train.item {
+        margin: 0 !important;
+        padding: 3em !important
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .train.item .time-in-way {
+        position: relative
+    }
+
+    .train.item .time-in-way:before {
+        right: auto;
+        left: -5em
+    }
+
+    .train.item .time-in-way:after,
+    .train.item .time-in-way:before {
+        content: "";
+        background-color: rgba(0, 0, 0, .6);
+        height: 1px;
+        width: 6em;
+        position: absolute;
+        top: 48%;
+        bottom: auto
+    }
+
+    .train.item .time-in-way:after {
+        right: -5em;
+        left: auto
+    }
+}
+
+.fos_comment_thread_show {
+    margin-top: 2em;
+    padding: 1em 20px;
+    width: 472px;
+    background: #f0f0f0;
+    box-shadow: 0 0 7px #bbb;
+    -moz-box-shadow: 0 0 7px #bbb;
+    -webkit-box-shadow: 0 0 7px #bbb;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px
+}
+
+.fos_comment_thread_show h3 {
+    font-size: 1.3em;
+    font-weight: 700;
+    margin-bottom: 1em;
+    color: #a0a0a0
+}
+
+.fos_comment_comment_show {
+    color: #555
+}
+
+.fos_comment_comment_metas {
+    margin: 1.5em 0 .5em;
+    padding: 1em 20px;
+    background: #e6e6e6;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px
+}
+
+.fos_comment_comment_body {
+    line-height: 1.5em
+}
+
+.fos_comment_comments .fos_comment_comments {
+    margin-left: 2em
+}
+
+.fos_comment_comment_reply {
+    text-align: right
+}
+
+.fos_comment_comment_reply.replying {
+    text-align: left;
+    margin-top: 1em;
+    padding: 1em 20px;
+    background: #d6d6d6;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px
+}
+
+.fos_comment_comment_reply_show_form {
+    padding: 2px 5px;
+    font-size: .8em
+}
+
+.fos_comment_comment_reply.fos_comment_replying button.fos_comment_comment_reply_show_form {
+    display: none
+}
+
+.fos_comment_thread_comments {
+    margin-bottom: 1.5em
+}
+
+.fos_comment_reply_prototype {
+    display: none
+}
+
+.fos_comment_thread_show>form.fos_comment_comment_form {
+    margin-bottom: 1em
+}
+
+form.fos_comment_comment_form.processing {
+    opacity: .5
+}
+
+form.fos_comment_comment_form label.author_name {
+    margin-top: 3px;
+    float: left
+}
+
+form.fos_comment_comment_form label.author_name input {
+    padding: 2px 5px
+}
+
+form.fos_comment_comment_form textarea {
+    width: 98%;
+    height: 6em;
+    padding: 1%
+}
+
+form.fos_comment_comment_form.error textarea {
+    border-color: red
+}
+
+.fos_comment_form_errors {
+    color: red
+}
+
+.fos_comment_submit {
+    text-align: right
+}
+
+.fos_comment_submit input {
+    font-size: 1.2em;
+    padding: 3px 12px;
+    margin-top: 3px
+}
+
+a.fos_comment_thread_feed {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: right
+}
+
+.fos_comment_comment_voting {
+    float: right
+}
+
+.fos_comment_comment_score {
+    display: inline-block
+}
+
+#backward-direction-trains {
+    display: none
+}
+
+/*!
+ * # Semantic UI - Transition
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.transition {
+    animation-iteration-count: 1;
+    animation-duration: .3s;
+    animation-timing-function: ease;
+    animation-fill-mode: both
+}
+
+.animating.transition {
+    backface-visibility: hidden;
+    visibility: visible !important
+}
+
+.loading.transition {
+    position: absolute;
+    top: -99999px;
+    left: -99999px
+}
+
+.hidden.transition {
+    display: none;
+    visibility: hidden
+}
+
+.visible.transition {
+    display: block !important;
+    visibility: visible !important
+}
+
+.disabled.transition {
+    animation-play-state: paused
+}
+
+.looping.transition {
+    animation-iteration-count: infinite
+}
+
+/*!
+ * # Semantic UI - Dimmer
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.dimmable:not(body) {
+    position: relative
+}
+
+.ui.dimmer {
+    display: none;
+    position: absolute;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    vertical-align: baseline;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, .85);
+    opacity: 0;
+    line-height: 1.4285em;
+    animation-fill-mode: both;
+    animation-duration: .5s;
+    transition: background .1s ease, color .1s ease;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    will-change: opacity;
+    z-index: 1001
+}
+
+.ui.dimmer>.content {
+    user-select: text;
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.segment>.ui.dimmer {
+    border-radius: inherit !important
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-track {
+    background: hsla(0, 0%, 100%, .1)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb {
+    background: hsla(0, 0%, 100%, .25)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:window-inactive {
+    background: hsla(0, 0%, 100%, .15)
+}
+
+.ui.dimmer:not(.inverted)::-webkit-scrollbar-thumb:hover {
+    background: hsla(0, 0%, 100%, .35)
+}
+
+.animating.dimmable:not(body),
+.dimmed.dimmable:not(body) {
+    overflow: hidden
+}
+
+.dimmed.dimmable>.ui.animating.dimmer,
+.dimmed.dimmable>.ui.visible.dimmer,
+.ui.active.dimmer {
+    display: flex;
+    opacity: 1
+}
+
+.ui.disabled.dimmer {
+    width: 0 !important;
+    height: 0 !important
+}
+
+.dimmed.dimmable>.ui.animating.legacy.dimmer,
+.dimmed.dimmable>.ui.visible.legacy.dimmer,
+.ui.active.legacy.dimmer {
+    display: block
+}
+
+.ui[class*="top aligned"].dimmer {
+    justify-content: flex-start
+}
+
+.ui[class*="bottom aligned"].dimmer {
+    justify-content: flex-end
+}
+
+.ui.page.dimmer {
+    position: fixed;
+    transform-style: "";
+    perspective: 2000px;
+    transform-origin: center center
+}
+
+body.animating.in.dimmable,
+body.dimmed.dimmable {
+    overflow: hidden
+}
+
+body.dimmable>.dimmer {
+    position: fixed
+}
+
+.blurring.dimmable>:not(.dimmer) {
+    filter: blur(0) grayscale(0);
+    transition: filter .8s ease
+}
+
+.blurring.dimmed.dimmable>:not(.dimmer) {
+    filter: blur(5px) grayscale(.7)
+}
+
+.blurring.dimmable>.dimmer {
+    background-color: rgba(0, 0, 0, .6)
+}
+
+.blurring.dimmable>.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .6)
+}
+
+.ui.dimmer>.top.aligned.content>* {
+    vertical-align: top
+}
+
+.ui.dimmer>.bottom.aligned.content>* {
+    vertical-align: bottom
+}
+
+.ui.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .85)
+}
+
+.ui.inverted.dimmer>.content>* {
+    color: hsla(0, 0%, 100%, .9)
+}
+
+.ui.simple.dimmer {
+    display: block;
+    overflow: hidden;
+    opacity: 1;
+    width: 0;
+    height: 0%;
+    z-index: -100;
+    background-color: transparent
+}
+
+.dimmed.dimmable>.ui.simple.dimmer {
+    overflow: visible;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .85);
+    z-index: 1
+}
+
+.ui.simple.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, 0)
+}
+
+.dimmed.dimmable>.ui.simple.inverted.dimmer {
+    background-color: hsla(0, 0%, 100%, .85)
+}
+
+/*!
+ * # Semantic UI - Modal
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.modal {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+    text-align: left;
+    background: #fff;
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: none;
+    transform-origin: 50% 25%;
+    flex: 0 0 auto;
+    border-radius: 0;
+    user-select: text;
+    will-change: top, left, margin, transform, opacity
+}
+
+.ui.modal>.icon:first-child+*,
+.ui.modal>:first-child:not(.icon) {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0
+}
+
+.ui.modal>:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0
+}
+
+.ui.modal>.close {
+    cursor: pointer;
+    position: absolute;
+    top: -2.5rem;
+    right: -2.5rem;
+    z-index: 1;
+    opacity: .8;
+    font-size: 1.25em;
+    color: #fff;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: .625rem 0 0
+}
+
+.ui.modal>.close:hover {
+    opacity: 1
+}
+
+.ui.modal>.header {
+    display: block;
+    font-family: Lato, Helvetica Neue, Arial, Helvetica, sans-serif;
+    background: #f9fafb;
+    margin: calc(2rem - .14286em) 0 1rem;
+    padding: .92857143em .78571429em;
+    box-shadow: none;
+    color: rgba(0, 0, 0, .87);
+    border-bottom: 1px solid rgba(34, 36, 38, .1)
+}
+
+.ui.modal>.header:not(.ui) {
+    font-size: 1.42857143rem;
+    line-height: 1.28571429em;
+    font-weight: 700
+}
+
+.ui.modal>.content {
+    display: block;
+    width: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+    padding: 1.5rem;
+    background: #fff
+}
+
+.ui.modal>.image.content {
+    display: flex;
+    flex-direction: row
+}
+
+.ui.modal>.content>.image {
+    display: block;
+    flex: 0 1 auto;
+    width: "";
+    align-self: top
+}
+
+.ui.modal>[class*="top aligned"] {
+    align-self: top
+}
+
+.ui.modal>[class*="middle aligned"] {
+    align-self: middle
+}
+
+.ui.modal>[class*=stretched] {
+    align-self: stretch
+}
+
+.ui.modal>.content>.description {
+    display: block;
+    flex: 1 0 auto;
+    min-width: 0;
+    align-self: top
+}
+
+.ui.modal>.content>.icon+.description,
+.ui.modal>.content>.image+.description {
+    flex: 0 1 auto;
+    min-width: "";
+    width: auto;
+    padding-left: 2em
+}
+
+.ui.modal>.content>.image>i.icon {
+    margin: 0;
+    opacity: 1;
+    width: auto;
+    line-height: 1;
+    font-size: 8rem
+}
+
+.ui.modal>.actions {
+    background: #f9fafb;
+    padding: 1rem;
+    border-top: 1px solid rgba(34, 36, 38, .15);
+    text-align: right
+}
+
+.ui.modal .actions>.button {
+    margin-left: .75em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.modal {
+        width: 88%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.modal {
+        width: 850px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.modal {
+        width: 900px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.modal {
+        width: 950px;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:991px) {
+    .ui.modal>.header {
+        padding-right: 2.25rem
+    }
+
+    .ui.modal>.close {
+        top: .73207143em;
+        right: 1rem;
+        color: rgba(0, 0, 0, .87)
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .ui.modal>.header {
+        padding: .75rem 2.25rem .75rem 1rem !important
+    }
+
+    .ui.modal>.content {
+        display: block;
+        padding: 1rem !important
+    }
+
+    .ui.modal>.close {
+        top: .5rem !important;
+        right: .5rem !important
+    }
+
+    .ui.modal .image.content {
+        flex-direction: column
+    }
+
+    .ui.modal .content>.image {
+        display: block;
+        max-width: 100%;
+        margin: 0 auto !important;
+        text-align: center;
+        padding: 0 0 1rem !important
+    }
+
+    .ui.modal>.content>.image>i.icon {
+        font-size: 5rem;
+        text-align: center
+    }
+
+    .ui.modal .content>.description {
+        display: block;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 1rem 0 !important;
+        box-shadow: none
+    }
+
+    .ui.modal>.actions {
+        padding: 1rem 1rem 0 !important
+    }
+
+    .ui.modal .actions>.button,
+    .ui.modal .actions>.buttons {
+        margin-bottom: 1rem
+    }
+}
+
+.ui.inverted.dimmer>.ui.modal {
+    box-shadow: 1px 3px 10px 2px rgba(0, 0, 0, .2)
+}
+
+.ui.basic.modal {
+    border: none;
+    border-radius: 0;
+    box-shadow: none !important;
+    color: #fff
+}
+
+.ui.basic.modal,
+.ui.basic.modal>.actions,
+.ui.basic.modal>.content,
+.ui.basic.modal>.header {
+    background-color: transparent
+}
+
+.ui.basic.modal>.header {
+    color: #fff
+}
+
+.ui.basic.modal>.close {
+    top: 1rem;
+    right: 1.5rem
+}
+
+.ui.inverted.dimmer>.basic.modal {
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.inverted.dimmer>.ui.basic.modal>.header {
+    color: rgba(0, 0, 0, .85)
+}
+
+.ui.legacy.modal,
+.ui.legacy.page.dimmer>.ui.modal {
+    top: 50%;
+    left: 50%
+}
+
+.ui.legacy.page.dimmer>.ui.scrolling.modal,
+.ui.page.dimmer>.ui.scrolling.legacy.modal,
+.ui.top.aligned.dimmer>.ui.legacy.modal,
+.ui.top.aligned.legacy.page.dimmer>.ui.modal {
+    top: auto
+}
+
+@media only screen and (max-width:991px) {
+    .ui.basic.modal>.close {
+        color: #fff
+    }
+}
+
+.ui.loading.modal {
+    display: block;
+    visibility: hidden;
+    z-index: -1
+}
+
+.ui.active.modal {
+    display: block
+}
+
+.modals.dimmer[class*="top aligned"] .modal {
+    margin: 5vh auto
+}
+
+@media only screen and (max-width:767px) {
+    .modals.dimmer[class*="top aligned"] .modal {
+        margin: 1rem auto
+    }
+}
+
+.legacy.modals.dimmer[class*="top aligned"] {
+    padding-top: 5vh
+}
+
+@media only screen and (max-width:767px) {
+    .legacy.modals.dimmer[class*="top aligned"] {
+        padding-top: 1rem
+    }
+}
+
+.scrolling.dimmable.dimmed {
+    overflow: hidden
+}
+
+.scrolling.dimmable>.dimmer {
+    justify-content: flex-start
+}
+
+.scrolling.dimmable.dimmed>.dimmer {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrolling.dimmable>.dimmer {
+    position: fixed
+}
+
+.modals.dimmer .ui.scrolling.modal {
+    margin: 1rem auto
+}
+
+.scrolling.undetached.dimmable.dimmed {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+.scrolling.undetached.dimmable.dimmed>.dimmer {
+    overflow: hidden
+}
+
+.scrolling.undetached.dimmable .ui.scrolling.modal {
+    position: absolute;
+    left: 50%;
+    margin-top: 1rem !important
+}
+
+.ui.modal .scrolling.content {
+    max-height: calc(80vh - 10em);
+    overflow: auto
+}
+
+.ui.fullscreen.modal {
+    width: 95% !important;
+    margin: 1em auto
+}
+
+.ui.fullscreen.modal>.header {
+    padding-right: 2.25rem
+}
+
+.ui.fullscreen.modal>.close {
+    top: .73207143em;
+    right: 1rem;
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.modal {
+    font-size: 1em
+}
+
+.ui.mini.modal>.header:not(.ui) {
+    font-size: 1.3em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.mini.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.mini.modal {
+        width: 35.2%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.mini.modal {
+        width: 340px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.mini.modal {
+        width: 360px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.mini.modal {
+        width: 380px;
+        margin: 0
+    }
+}
+
+@media only screen and (max-width:767px) {
+    .ui.tiny.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.tiny.modal {
+        width: 52.8%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.tiny.modal {
+        width: 510px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.tiny.modal {
+        width: 540px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.tiny.modal {
+        width: 570px;
+        margin: 0
+    }
+}
+
+.ui.small.modal>.header:not(.ui) {
+    font-size: 1.3em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.small.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.small.modal {
+        width: 70.4%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.small.modal {
+        width: 680px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.small.modal {
+        width: 720px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.small.modal {
+        width: 760px;
+        margin: 0
+    }
+}
+
+.ui.large.modal>.header {
+    font-size: 1.6em
+}
+
+@media only screen and (max-width:767px) {
+    .ui.large.modal {
+        width: 95%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:768px) {
+    .ui.large.modal {
+        width: 88%;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:992px) {
+    .ui.large.modal {
+        width: 1020px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1200px) {
+    .ui.large.modal {
+        width: 1080px;
+        margin: 0
+    }
+}
+
+@media only screen and (min-width:1920px) {
+    .ui.large.modal {
+        width: 1140px;
+        margin: 0
+    }
+}
+
+/*!
+ * # Semantic UI - Rating
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.rating {
+    display: inline-flex;
+    white-space: nowrap;
+    vertical-align: baseline
+}
+
+.ui.rating:last-child {
+    margin-right: 0
+}
+
+.ui.rating .icon {
+    padding: 0;
+    margin: 0;
+    flex: 1 0 auto;
+    cursor: pointer;
+    width: 1.18em;
+    height: auto;
+    transition: opacity .1s ease, background .1s ease, text-shadow .1s ease, color .1s ease;
+    background: transparent;
+    color: rgba(0, 0, 0, .15)
+}
+
+.ui.rating .active.icon,
+.ui.rating .icon.selected,
+.ui.rating .icon.selected.active {
+    background: transparent;
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.star.rating .icon {
+    width: 1.18em;
+    height: auto;
+    background: transparent;
+    color: rgba(0, 0, 0, .15);
+    text-shadow: none
+}
+
+.ui.star.rating .active.icon {
+    background: transparent !important;
+    color: #ffe623 !important;
+    text-shadow: 0 -1px 0 #ddc507, -1px 0 0 #ddc507, 0 1px 0 #ddc507, 1px 0 0 #ddc507 !important
+}
+
+.ui.star.rating .icon.selected,
+.ui.star.rating .icon.selected.active {
+    background: transparent !important;
+    color: #fc0 !important;
+    text-shadow: 0 -1px 0 #e6a200, -1px 0 0 #e6a200, 0 1px 0 #e6a200, 1px 0 0 #e6a200 !important
+}
+
+.ui.heart.rating .icon {
+    width: 1.4em;
+    height: auto;
+    background: transparent;
+    color: rgba(0, 0, 0, .15);
+    text-shadow: none !important
+}
+
+.ui.heart.rating .active.icon {
+    background: transparent !important;
+    color: #ff6d75 !important;
+    text-shadow: 0 -1px 0 #cd0707, -1px 0 0 #cd0707, 0 1px 0 #cd0707, 1px 0 0 #cd0707 !important
+}
+
+.ui.heart.rating .icon.selected,
+.ui.heart.rating .icon.selected.active {
+    background: transparent !important;
+    color: #ff3000 !important;
+    text-shadow: 0 -1px 0 #aa0101, -1px 0 0 #aa0101, 0 1px 0 #aa0101, 1px 0 0 #aa0101 !important
+}
+
+.ui.disabled.rating .icon {
+    cursor: default
+}
+
+.ui.rating .icon.selected,
+.ui.rating.selected .active.icon,
+.ui.rating.selected .icon.selected {
+    opacity: 1
+}
+
+.ui.mini.rating {
+    font-size: .78571429rem
+}
+
+.ui.tiny.rating {
+    font-size: .85714286rem
+}
+
+.ui.small.rating {
+    font-size: .9em
+}
+
+.ui.rating {
+    font-size: 1em
+}
+
+.ui.large.rating {
+    font-size: 1.1em
+}
+
+.ui.huge.rating {
+    font-size: 1.42857143rem
+}
+
+.ui.massive.rating {
+    font-size: 1.71428571rem
+}
+
+/*!
+ * # Semantic UI - Comment
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.comments {
+    margin: 1em 0;
+    max-width: inherit
+}
+
+.ui.comments:first-child {
+    margin-top: 0
+}
+
+.ui.comments:last-child {
+    margin-bottom: 0
+}
+
+.ui.comments .comment {
+    position: relative;
+    background: none;
+    margin: .5em 0 0;
+    padding: .5em 0 0;
+    border: none;
+    line-height: 1.2
+}
+
+.ui.comments .comment:first-child {
+    margin-top: 0;
+    padding-top: 0
+}
+
+.ui.comments .comment .comments {
+    margin: 0;
+    padding: 0 0 0 1em
+}
+
+.ui.comments .comment .comments:before {
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.ui.comments .comment .comments .comment {
+    border: none;
+    background: none
+}
+
+.ui.comments .comment .avatar {
+    display: block;
+    width: 2.5em;
+    height: auto;
+    float: left;
+    margin: .2em 0 0
+}
+
+.ui.comments .comment .avatar img,
+.ui.comments .comment img.avatar {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    border-radius: .25rem
+}
+
+.ui.comments .comment>.content {
+    display: block
+}
+
+.ui.comments .comment>.avatar~.content {
+    margin-left: 3.5em
+}
+
+.ui.comments .comment .author {
+    font-size: 1em;
+    color: rgba(0, 0, 0, .87);
+    font-weight: 700
+}
+
+.ui.comments .comment a.author {
+    cursor: pointer
+}
+
+.ui.comments .comment a.author:hover {
+    color: #1e70bf
+}
+
+.ui.comments .comment .metadata {
+    display: inline-block;
+    margin-left: .5em;
+    color: rgba(0, 0, 0, .4);
+    font-size: .875em
+}
+
+.ui.comments .comment .metadata>* {
+    display: inline-block;
+    margin: 0 .5em 0 0
+}
+
+.ui.comments .comment .metadata>:last-child {
+    margin-right: 0
+}
+
+.ui.comments .comment .text {
+    margin: .25em 0 .5em;
+    font-size: 1em;
+    word-wrap: break-word;
+    color: rgba(0, 0, 0, .87);
+    line-height: 1.3
+}
+
+.ui.comments .comment .actions {
+    font-size: .875em
+}
+
+.ui.comments .comment .actions a {
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 .75em 0 0;
+    color: rgba(0, 0, 0, .4)
+}
+
+.ui.comments .comment .actions a:last-child {
+    margin-right: 0
+}
+
+.ui.comments .comment .actions a.active,
+.ui.comments .comment .actions a:hover {
+    color: rgba(0, 0, 0, .8)
+}
+
+.ui.comments>.reply.form {
+    margin-top: 1em
+}
+
+.ui.comments .comment .reply.form {
+    width: 100%;
+    margin-top: 1em
+}
+
+.ui.comments .reply.form textarea {
+    font-size: 1em;
+    height: 12em
+}
+
+.ui.collapsed.comments,
+.ui.comments .collapsed.comment,
+.ui.comments .collapsed.comments {
+    display: none
+}
+
+.ui.threaded.comments .comment .comments {
+    margin: -1.5em 0 -1em 1.25em;
+    padding: 3em 0 2em 2.25em;
+    box-shadow: -1px 0 0 rgba(34, 36, 38, .15)
+}
+
+.ui.minimal.comments .comment .actions {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: auto;
+    transition: opacity .2s ease;
+    transition-delay: .1s
+}
+
+.ui.minimal.comments .comment>.content:hover>.actions {
+    opacity: 1
+}
+
+.ui.mini.comments {
+    font-size: .78571429rem
+}
+
+.ui.tiny.comments {
+    font-size: .85714286rem
+}
+
+.ui.small.comments {
+    font-size: .9em
+}
+
+.ui.comments {
+    font-size: 1em
+}
+
+.ui.large.comments {
+    font-size: 1.1em
+}
+
+.ui.big.comments {
+    font-size: 1.28571429rem
+}
+
+.ui.huge.comments {
+    font-size: 1.42857143rem
+}
+
+.ui.massive.comments {
+    font-size: 1.71428571rem
+}
+
+/*!
+ * # Semantic UI - Table
+ * http://github.com/semantic-org/semantic-ui/
+ *
+ *
+ * Released under the MIT license
+ * http://opensource.org/licenses/MIT
+ *
+ */
+.ui.table {
+    width: 100%;
+    background: #fff;
+    margin: 1em 0;
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: none;
+    border-radius: 0;
+    text-align: left;
+    color: rgba(0, 0, 0, .87);
+    border-collapse: separate;
+    border-spacing: 0
+}
+
+.ui.table:first-child {
+    margin-top: 0
+}
+
+.ui.table:last-child {
+    margin-bottom: 0
+}
+
+.ui.table td,
+.ui.table th {
+    transition: background .1s ease, color .1s ease
+}
+
+.ui.table thead {
+    box-shadow: none
+}
+
+.ui.table thead th {
+    cursor: auto;
+    background: #f9fafb;
+    text-align: inherit;
+    color: rgba(0, 0, 0, .87);
+    padding: .92857143em .78571429em;
+    vertical-align: inherit;
+    font-style: none;
+    font-weight: 700;
+    text-transform: none;
+    border-bottom: 1px solid rgba(34, 36, 38, .1);
+    border-left: none
+}
+
+.ui.table thead tr>th:first-child {
+    border-left: none
+}
+
+.ui.table thead tr:first-child>th:first-child,
+.ui.table thead tr:first-child>th:last-child,
+.ui.table thead tr:first-child>th:only-child {
+    border-radius: 0 0 0 0
+}
+
+.ui.table tfoot {
+    box-shadow: none
+}
+
+.ui.table tfoot th {
+    cursor: auto;
+    border-top: 1px solid rgba(34, 36, 38, .15);
+    background: #f9fafb;
+    text-align: inherit;
+    color: rgba(0, 0, 0, .87);
+    padding: .78571429em;
+    vertical-align: middle;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none
+}
+
+.ui.table tfoot tr>th:first-child {
+    border-left: none
+}
+
+.ui.table tfoot tr:first-child>th:first-child,
+.ui.table tfoot tr:first-child>th:last-child,
+.ui.table tfoot tr:first-child>th:only-child {
+    border-radius: 0 0 0 0
+}
+
+.ui.table tr td {
+    border-top: 1px solid rgba(34, 36, 38, .1)
+}
+
+.ui.table tr:first-child td {
+    border-top: none
+}
+
+.ui.table tbody+tbody tr:first-child td {
+    border-top: 1px solid rgba(34, 36, 38, .1)
+}
+
+.ui.table td {
+    padding: .78571429em;
+    text-align: inherit
+}
+
+.ui.table>.icon {
+    vertical-align: baseline
+}
+
+.ui.table>.icon:only-child {
+    margin: 0
+}
+
+.ui.table.segment {
+    padding: 0
+}
+
+.ui.table.segment:after {
+    display: none
+}
+
+.ui.table.segment.stacked:after {
+    display: block
+}
+
+@media only screen and (max-width:767px) {
+    .ui.table:not(.unstackable) {
+        width: 100%
+    }
+
+    .ui.table:not(.unstackable) tbody,
+    .ui.table:not(.unstackable) tr,
+    .ui.table:not(.unstackable) tr>td,
+    .ui.table:not(.unstackable) tr>th {
+        width: auto !important;
+        display: block !important
+    }
+
+    .ui.table:not(.unstackable) {
+        padding: 0
+    }
+
+    .ui.table:not(.unstackable) tfoot,
+    .ui.table:not(.unstackable) thead {
+        display: block
+    }
+
+    .ui.table:not(.unstackable) tr {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, .1) !important
+    }
+
+    .ui.table:not(.unstackable) tr>td,
+    .ui.table:not(.unstackable) tr>th {
+        background: none;
+        border: none !important;
+        padding: .25em .75em !important;
+        box-shadow: none !important
+    }
+
+    .ui.table:not(.unstackable) td:first-child,
+    .ui.table:not(.unstackable) th:first-child {
+        font-weight: 700
+    }
+
+    .ui.definition.table:not(.unstackable) thead th:first-child {
+        box-shadow: none !important
+    }
+}
+
+.ui.table td .image,
+.ui.table td .image img,
+.ui.table th .image,
+.ui.table th .image img {
+    max-width: none
+}
+
+.ui.structured.table {
+    border-collapse: collapse
+}
+
+.ui.structured.table thead th {
+    border-left: none;
+    border-right: none
+}
+
+.ui.structured.sortable.table thead th {
+    border-left: 1px solid rgba(34, 36, 38, .15);
+    border-right: 1px solid rgba(34, 36, 38, .15)
+}
+
+.ui.structured.basic.table th {
+    border-left: none;
+    border-right: none
+}
+
+.ui.structured.celled.table tr td,
+.ui.structured.celled.table tr th {
+    border-left: 1px solid rgba(34, 36, 38, .1);
+    border-right: 1px solid rgba(34, 36, 38, .1)
+}
+
+.ui.definition.table thead:not(.full-width) th:first-child {
+    pointer-events: none;
+    background: transparent;
+    font-weight: 400;
+    color: rgba(0, 0, 0, .4);
+    box-shadow: -1px -1px 0 1px #fff
+}
+
+.ui.definition.table tfoot:not(.full-width) th:first-child {
+    pointer-events: none;
+    background: transparent;
+    font-weight: rgba(0, 0, 0, .4);
+    color: normal;
+    box-shadow: 1px 1px 0 1px #fff
+}
+
+.ui.celled.definition.table thead:not(.full-width) th:first-child {
+    box-shadow: 0 -1px 0 1px #fff
+}
+
+.ui.celled.definition.table tfoot:not(.full-width) th:first-child {
+    box-shadow: 0 1px 0 1px #fff
+}
+
+.ui.definition.table tr td.definition,
+.ui.definition.table tr td:first-child:not(.ignored) {
+    background: rgba(0, 0, 0, .03);
+    font-weight: 700;
+    color: rgba(0, 0, 0, .95);
+    text-transform: "";
+    box-shadow: "";
+    text-align: "";
+    font-size: 1em;
+    padding-left: "";
+    padding-right: ""
+}
+
+.ui.definition.table td:nth-child(2),
+.ui.definition.table tfoot:not(.full-width) th:nth-child(2),
+.ui.definition.table thead:not(.full-width) th:nth-child(2) {
+    border-left: 1px solid rgba(34, 36, 38, .15)
+}
+
+.ui.table td.positive,
+.ui.table tr.positive {
+    box-shadow: inset 0 0 0 #a3c293;
+    background: #fcfff5 !important;
+    color: #2c662d !important
+}
+
+.ui.table td.negative,
+.ui.table tr.negative {
+    box-shadow: inset 0 0 0 #e0b4b4;
+    background: #fff6f6 !important;
+    color: #9f3a38 !important
+}
+
+.ui.table td.error,
+.ui.table tr.error {
+    box-shadow: inset 0 0 0 #e0b4b4;
+    background: #fff6f6 !important;
+    color: #9f3a38 !important
+}
+
+.ui.table td.warning,
+.ui.table tr.warning {
+    box-shadow: inset 0 0 0 #c9ba9b;
+    background: #fffaf3 !important;
+    color: #573a08 !important
+}
+
+.ui.table td.active,
+.ui.table tr.active {
+    box-shadow: inset 0 0 0 rgba(0, 0, 0, .87);
+    background: #e0e0e0 !important;
+    color: rgba(0, 0, 0, .87) !important
+}
+
+.ui.table tr.disabled:hover,
+.ui.table tr.disabled td,
+.ui.table tr:hover td.disabled,
+.ui.table tr td.disabled {
+    pointer-events: none;
+    color: rgba(40, 40, 40, .3)
+}
+
+@media only screen and (max-width:991px) {
+
+    .ui[class*="tablet stackable"].table,
+    .ui[class*="tablet stackable"].table tbody,
+    .ui[class*="tablet stackable"].table tr,
+    .ui[class*="tablet stackable"].table tr>td,
+    .ui[class*="tablet stackable"].table tr>th {
+        width: 100% !important;
+        display: block !important
+    }
+
+    .ui[class*="tablet stackable"].table {
+        padding: 0
+    }
+
+    .ui[class*="tablet stackable"].table tfoot,
+    .ui[class*="tablet stackable"].table thead {
+        display: block
+    }
+
+    .ui[class*="tablet stackable"].table tr {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, .1) !important
+    }
+
+    .ui[class*="tablet stackable"].table tr>td,
+    .ui[class*="tablet stackable"].table tr>th {
+        background: none;
+        border: none !important;
+        padding: .25em .75em;
+        box-shadow: none !important
+    }
+
+    .ui.definition[class*="tablet stackable"].table thead th:first-child {
+        box-shadow: none !important
+    }
+}
+
+.ui.table[class*="left aligned"],
+.ui.table [class*="left aligned"] {
+    text-align: left
+}
+
+.ui.table[class*="center aligned"],
+.ui.table [class*="center aligned"] {
+    text-align: center
+}
+
+.ui.table[class*="right aligned"],
+.ui.table [class*="right aligned"] {
+    text-align: right
+}
+
+.ui.table[class*="top aligned"],
+.ui.table [class*="top aligned"] {
+    vertical-align: top
+}
+
+.ui.table[class*="middle aligned"],
+.ui.table [class*="middle aligned"] {
+    vertical-align: middle
+}
+
+.ui.table[class*="bottom aligned"],
+.ui.table [class*="bottom aligned"] {
+    vertical-align: bottom
+}
+
+.ui.table td.collapsing,
+.ui.table th.collapsing {
+    width: 1px;
+    white-space: nowrap
+}
+
+.ui.fixed.table {
+    table-layout: fixed
+}
+
+.ui.fixed.table td,
+.ui.fixed.table th {
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.ui.selectable.table tbody tr:hover,
+.ui.table tbody tr td.selectable:hover {
+    background: rgba(0, 0, 0, .05) !important;
+    color: rgba(0, 0, 0, .95) !important
+}
+
+.ui.inverted.table tbody tr td.selectable:hover,
+.ui.selectable.inverted.table tbody tr:hover {
+    background: hsla(0, 0%, 100%, .08) !important;
+    color: #fff !important
+}
+
+.ui.table tbody tr td.selectable {
+    padding: 0
+}
+
+.ui.table tbody tr td.selectable>a:not(.ui) {
+    display: block;
+    color: inherit;
+    padding: .78571429em
+}
+
+.ui.selectable.table tr.error:hover,
+.ui.selectable.table tr:hover td.error,
+.ui.table tr td.selectable.error:hover {
+    background: #ffe7e7 !important;
+    color: #943634 !important
+}
+
+.ui.selectable.table tr.warning:hover,
+.ui.selectable.table tr:hover td.warning,
+.ui.table tr td.selectable.warning:hover {
+    background: #fff4e4 !important;
+    color: #493107 !important
+}
+
+.ui.selectable.table tr.active:hover,
+.ui.selectable.table tr:hover td.active,
+.ui.table tr td.selectable.active:hover {
+    background: #e0e0e0 !important;
+    color: rgba(0, 0, 0, .87) !important
+}
+
+.ui.selectable.table tr.positive:hover,
+.ui.selectable.table tr:hover td.positive,
+.ui.table tr td.selectable.positive:hover {
+    background: #f7ffe6 !important;
+    color: #275b28 !important
+}
+
+.ui.selectable.table tr.negative:hover,
+.ui.selectable.table tr:hover td.negative,
+.ui.table tr td.selectable.negative:hover {
+    background: #ffe7e7 !important;
+    color: #943634 !important
+}
+
+.ui.attached.table {
+    top: 0;
+    bottom: 0;
+    border-radius: 0;
+    margin: 0 -1px;
+    width: calc(100% - -2px);
+    max-width: calc(100% - -2px);
+    box-shadow: none;
+    border: 1px solid #d4d4d5
+}
+
+.ui.attached+.ui.attached.table:not(.top) {
+    border-top: none
+}
+
+.ui[class*="top attached"].table {
+    bottom: 0;
+    margin-bottom: 0;
+    top: 0;
+    margin-top: 1em;
+    border-radius: 0 0 0 0
+}
+
+.ui.table[class*="top attached"]:first-child {
+    margin-top: 0
+}
+
+.ui[class*="bottom attached"].table {
+    bottom: 0;
+    margin-top: 0;
+    top: 0;
+    margin-bottom: 1em;
+    box-shadow: none, none;
+    border-radius: 0 0 0 0
+}
+
+.ui[class*="bottom attached"].table:last-child {
+    margin-bottom: 0
+}
+
+.ui.striped.table>tr:nth-child(2n),
+.ui.striped.table tbody tr:nth-child(2n) {
+    background-color: #eaeff1
+}
+
+.ui.inverted.striped.table>tr:nth-child(2n),
+.ui.inverted.striped.table tbody tr:nth-child(2n) {
+    background-color: #f3f3f3
+}
+
+.ui.striped.selectable.selectable.selectable.table tbody tr.active:hover {
+    background: #efefef !important;
+    color: rgba(0, 0, 0, .95) !important
+}
+
+.ui.table[class*="single line"],
+.ui.table [class*="single line"] {
+    white-space: nowrap
+}
+
+.ui.red.table {
+    border-top: .2em solid #db2828
+}
+
+.ui.inverted.red.table {
+    background-color: #db2828 !important;
+    color: #fff !important
+}
+
+.ui.orange.table {
+    border-top: .2em solid #f2711c
+}
+
+.ui.inverted.orange.table {
+    background-color: #f2711c !important;
+    color: #fff !important
+}
+
+.ui.yellow.table {
+    border-top: .2em solid #fbbd08
+}
+
+.ui.inverted.yellow.table {
+    background-color: #fbbd08 !important;
+    color: #fff !important
+}
+
+.ui.olive.table {
+    border-top: .2em solid #b5cc18
+}
+
+.ui.inverted.olive.table {
+    background-color: #b5cc18 !important;
+    color: #fff !important
+}
+
+.ui.green.table {
+    border-top: .2em solid #21ba45
+}
+
+.ui.inverted.green.table {
+    background-color: #21ba45 !important;
+    color: #fff !important
+}
+
+.ui.teal.table {
+    border-top: .2em solid #00b5ad
+}
+
+.ui.inverted.teal.table {
+    background-color: #00b5ad !important;
+    color: #fff !important
+}
+
+.ui.blue.table {
+    border-top: .2em solid #007cb5
+}
+
+.ui.inverted.blue.table {
+    background-color: #007cb5 !important;
+    color: #fff !important
+}
+
+.ui.violet.table {
+    border-top: .2em solid #6435c9
+}
+
+.ui.inverted.violet.table {
+    background-color: #6435c9 !important;
+    color: #fff !important
+}
+
+.ui.purple.table {
+    border-top: .2em solid #a333c8
+}
+
+.ui.inverted.purple.table {
+    background-color: #a333c8 !important;
+    color: #fff !important
+}
+
+.ui.pink.table {
+    border-top: .2em solid #e03997
+}
+
+.ui.inverted.pink.table {
+    background-color: #e03997 !important;
+    color: #fff !important
+}
+
+.ui.brown.table {
+    border-top: .2em solid #a5673f
+}
+
+.ui.inverted.brown.table {
+    background-color: #a5673f !important;
+    color: #fff !important
+}
+
+.ui.grey.table {
+    border-top: .2em solid #c3c3c3
+}
+
+.ui.inverted.grey.table {
+    background-color: #c3c3c3 !important;
+    color: #fff !important
+}
+
+.ui.black.table {
+    border-top: .2em solid #1b1c1d
+}
+
+.ui.inverted.black.table {
+    background-color: #1b1c1d !important;
+    color: #fff !important
+}
+
+.ui.one.column.table td {
+    width: 100%
+}
+
+.ui.two.column.table td {
+    width: 50%
+}
+
+.ui.three.column.table td {
+    width: 33.33333333%
+}
+
+.ui.four.column.table td {
+    width: 25%
+}
+
+.ui.five.column.table td {
+    width: 20%
+}
+
+.ui.six.column.table td {
+    width: 16.66666667%
+}
+
+.ui.seven.column.table td {
+    width: 14.28571429%
+}
+
+.ui.eight.column.table td {
+    width: 12.5%
+}
+
+.ui.nine.column.table td {
+    width: 11.11111111%
+}
+
+.ui.ten.column.table td {
+    width: 10%
+}
+
+.ui.eleven.column.table td {
+    width: 9.09090909%
+}
+
+.ui.twelve.column.table td {
+    width: 8.33333333%
+}
+
+.ui.thirteen.column.table td {
+    width: 7.69230769%
+}
+
+.ui.fourteen.column.table td {
+    width: 7.14285714%
+}
+
+.ui.fifteen.column.table td {
+    width: 6.66666667%
+}
+
+.ui.sixteen.column.table td,
+.ui.table td.one.wide,
+.ui.table th.one.wide {
+    width: 6.25%
+}
+
+.ui.table td.two.wide,
+.ui.table th.two.wide {
+    width: 12.5%
+}
+
+.ui.table td.three.wide,
+.ui.table th.three.wide {
+    width: 18.75%
+}
+
+.ui.table td.four.wide,
+.ui.table th.four.wide {
+    width: 25%
+}
+
+.ui.table td.five.wide,
+.ui.table th.five.wide {
+    width: 31.25%
+}
+
+.ui.table td.six.wide,
+.ui.table th.six.wide {
+    width: 37.5%
+}
+
+.ui.table td.seven.wide,
+.ui.table th.seven.wide {
+    width: 43.75%
+}
+
+.ui.table td.eight.wide,
+.ui.table th.eight.wide {
+    width: 50%
+}
+
+.ui.table td.nine.wide,
+.ui.table th.nine.wide {
+    width: 56.25%
+}
+
+.ui.table td.ten.wide,
+.ui.table th.ten.wide {
+    width: 62.5%
+}
+
+.ui.table td.eleven.wide,
+.ui.table th.eleven.wide {
+    width: 68.75%
+}
+
+.ui.table td.twelve.wide,
+.ui.table th.twelve.wide {
+    width: 75%
+}
+
+.ui.table td.thirteen.wide,
+.ui.table th.thirteen.wide {
+    width: 81.25%
+}
+
+.ui.table td.fourteen.wide,
+.ui.table th.fourteen.wide {
+    width: 87.5%
+}
+
+.ui.table td.fifteen.wide,
+.ui.table th.fifteen.wide {
+    width: 93.75%
+}
+
+.ui.table td.sixteen.wide,
+.ui.table th.sixteen.wide {
+    width: 100%
+}
+
+.ui.sortable.table thead th {
+    cursor: pointer;
+    white-space: nowrap;
+    border-left: 1px solid rgba(34, 36, 38, .15);
+    color: rgba(0, 0, 0, .87)
+}
+
+.ui.sortable.table thead th:first-child {
+    border-left: none
+}
+
+.ui.sortable.table thead th.sorted,
+.ui.sortable.table thead th.sorted:hover {
+    user-select: none
+}
+
+.ui.sortable.table thead th:after {
+    display: none;
+    font-style: normal;
+    font-weight: 400;
+    text-decoration: inherit;
+    content: "";
+    height: 1em;
+    width: auto;
+    opacity: .8;
+    margin: 0 0 0 .5em;
+    font-family: Icons
+}
+
+.ui.sortable.table thead th.ascending:after {
+    content: "\F0D8"
+}
+
+.ui.sortable.table thead th.descending:after {
+    content: "\F0D7"
+}
+
+.ui.sortable.table th.disabled:hover {
+    cursor: auto;
+    color: rgba(40, 40, 40, .3)
+}
+
+.ui.sortable.table thead th:hover {
+    background: rgba(0, 0, 0, .05);
+    color: rgba(0, 0, 0, .8)
+}
+
+.ui.sortable.table thead th.sorted {
+    background: rgba(0, 0, 0, .05);
+    color: rgba(0, 0, 0, .95)
+}
+
+.ui.sortable.table thead th.sorted:after {
+    display: inline-block
+}
+
+.ui.sortable.table thead th.sorted:hover {
+    background: rgba(0, 0, 0, .05);
+    color: rgba(0, 0, 0, .95)
+}
+
+.ui.inverted.sortable.table thead th.sorted {
+    background: hsla(0, 0%, 100%, .15) linear-gradient(transparent, rgba(0, 0, 0, .05));
+    color: #fff
+}
+
+.ui.inverted.sortable.table thead th:hover {
+    background: hsla(0, 0%, 100%, .08) linear-gradient(transparent, rgba(0, 0, 0, .05));
+    color: #fff
+}
+
+.ui.inverted.sortable.table thead th {
+    border-left-color: transparent;
+    border-right-color: transparent
+}
+
+.ui.inverted.table {
+    background: #333;
+    color: hsla(0, 0%, 100%, .9);
+    border: none
+}
+
+.ui.inverted.table th {
+    background-color: rgba(0, 0, 0, .15);
+    color: hsla(0, 0%, 100%, .9) !important
+}
+
+.ui.inverted.table th,
+.ui.inverted.table tr td {
+    border-color: hsla(0, 0%, 100%, .1) !important
+}
+
+.ui.inverted.table tr.disabled:hover td,
+.ui.inverted.table tr.disabled td,
+.ui.inverted.table tr:hover td.disabled,
+.ui.inverted.table tr td.disabled {
+    pointer-events: none;
+    color: hsla(0, 0%, 88.2%, .3)
+}
+
+.ui.inverted.definition.table tfoot:not(.full-width) th:first-child,
+.ui.inverted.definition.table thead:not(.full-width) th:first-child {
+    background: #fff
+}
+
+.ui.inverted.definition.table tr td:first-child {
+    background: hsla(0, 0%, 100%, .02);
+    color: #fff
+}
+
+.ui.collapsing.table {
+    width: auto
+}
+
+.ui.basic.table {
+    background: transparent;
+    border: 1px solid rgba(34, 36, 38, .15);
+    box-shadow: none
+}
+
+.ui.basic.table tfoot,
+.ui.basic.table thead {
+    box-shadow: none
+}
+
+.ui.basic.table th {
+    background: transparent;
+    border-left: none
+}
+
+.ui.basic.table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, .1)
+}
+
+.ui.basic.table td {
+    background: transparent
+}
+
+.ui.basic.striped.table tbody tr:nth-child(2n) {
+    background-color: rgba(0, 0, 0, .05) !important
+}
+
+.ui[class*="very basic"].table {
+    border: none
+}
+
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td,
+.ui[class*="very basic"].table:not(.sortable):not(.striped) th {
+    padding: ""
+}
+
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td:first-child,
+.ui[class*="very basic"].table:not(.sortable):not(.striped) th:first-child {
+    padding-left: 0
+}
+
+.ui[class*="very basic"].table:not(.sortable):not(.striped) td:last-child,
+.ui[class*="very basic"].table:not(.sortable):not(.striped) th:last-child {
+    padding-right: 0
+}
+
+.ui[class*="very basic"].table:not(.sortable):not(.striped) thead tr:first-child th {
+    padding-top: 0
+}
+
+.ui.celled.table tr td,
+.ui.celled.table tr th {
+    border-left: 1px solid rgba(34, 36, 38, .1)
+}
+
+.ui.celled.table tr td:first-child,
+.ui.celled.table tr th:first-child {
+    border-left: none
+}
+
+.ui.padded.table th {
+    padding-left: 1em;
+    padding-right: 1em
+}
+
+.ui.padded.table td,
+.ui.padded.table th {
+    padding: 1em
+}
+
+.ui[class*="very padded"].table th {
+    padding-left: 1.5em;
+    padding-right: 1.5em
+}
+
+.ui[class*="very padded"].table td {
+    padding: 1.5em
+}
+
+.ui.compact.table th {
+    padding-left: .7em;
+    padding-right: .7em
+}
+
+.ui.compact.table td {
+    padding: .5em .7em
+}
+
+.ui[class*="very compact"].table th {
+    padding-left: .6em;
+    padding-right: .6em
+}
+
+.ui[class*="very compact"].table td {
+    padding: .4em .6em
+}
+
+.ui.small.table {
+    font-size: .9em
+}
+
+.ui.table {
+    font-size: 1em
+}
+
+.ui.large.table {
+    font-size: 1.1em
+}
+
+.transition.browse {
+    animation-duration: .5s
+}
+
+.transition.browse.in {
+    animation-name: browseIn
+}
+
+.transition.browse.left.out,
+.transition.browse.out {
+    animation-name: browseOutLeft
+}
+
+.transition.browse.right.out {
+    animation-name: browseOutRight
+}
+
+@keyframes browseIn {
+    0% {
+        transform: scale(.8) translateZ(0);
+        z-index: -1
+    }
+
+    10% {
+        transform: scale(.8) translateZ(0);
+        z-index: -1;
+        opacity: .7
+    }
+
+    80% {
+        transform: scale(1.05) translateZ(0);
+        opacity: 1;
+        z-index: 999
+    }
+
+    to {
+        transform: scale(1) translateZ(0);
+        z-index: 999
+    }
+}
+
+@keyframes browseOutLeft {
+    0% {
+        z-index: 999;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg)
+    }
+
+    50% {
+        z-index: -1;
+        transform: translateX(-105%) rotateY(35deg) rotateX(10deg) translateZ(-10px)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        z-index: -1;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg) translateZ(-10px);
+        opacity: 0
+    }
+}
+
+@keyframes browseOutRight {
+    0% {
+        z-index: 999;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg)
+    }
+
+    50% {
+        z-index: 1;
+        transform: translateX(105%) rotateY(35deg) rotateX(10deg) translateZ(-10px)
+    }
+
+    80% {
+        opacity: 1
+    }
+
+    to {
+        z-index: 1;
+        transform: translateX(0) rotateY(0deg) rotateX(0deg) translateZ(-10px);
+        opacity: 0
+    }
+}
+
+.drop.transition {
+    transform-origin: top center;
+    animation-duration: .4s;
+    animation-timing-function: cubic-bezier(.34, 1.61, .7, 1)
+}
+
+.drop.transition.in {
+    animation-name: dropIn
+}
+
+.drop.transition.out {
+    animation-name: dropOut
+}
+
+@keyframes dropIn {
+    0% {
+        opacity: 0;
+        transform: scale(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes dropOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0)
+    }
+}
+
+.transition.fade.in {
+    animation-name: fadeIn
+}
+
+.transition[class*="fade up"].in {
+    animation-name: fadeInUp
+}
+
+.transition[class*="fade down"].in {
+    animation-name: fadeInDown
+}
+
+.transition[class*="fade left"].in {
+    animation-name: fadeInLeft
+}
+
+.transition[class*="fade right"].in {
+    animation-name: fadeInRight
+}
+
+.transition.fade.out {
+    animation-name: fadeOut
+}
+
+.transition[class*="fade up"].out {
+    animation-name: fadeOutUp
+}
+
+.transition[class*="fade down"].out {
+    animation-name: fadeOutDown
+}
+
+.transition[class*="fade left"].out {
+    animation-name: fadeOutLeft
+}
+
+.transition[class*="fade right"].out {
+    animation-name: fadeOutRight
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeOutUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(5%)
+    }
+}
+
+@keyframes fadeOutDown {
+    0% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-5%)
+    }
+}
+
+@keyframes fadeOutLeft {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(5%)
+    }
+}
+
+@keyframes fadeOutRight {
+    0% {
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translateX(-5%)
+    }
+}
+
+.flip.transition.in,
+.flip.transition.out {
+    animation-duration: .6s
+}
+
+.horizontal.flip.transition.in {
+    animation-name: horizontalFlipIn
+}
+
+.horizontal.flip.transition.out {
+    animation-name: horizontalFlipOut
+}
+
+.vertical.flip.transition.in {
+    animation-name: verticalFlipIn
+}
+
+.vertical.flip.transition.out {
+    animation-name: verticalFlipOut
+}
+
+@keyframes horizontalFlipIn {
+    0% {
+        transform: perspective(2000px) rotateY(-90deg);
+        opacity: 0
+    }
+
+    to {
+        transform: perspective(2000px) rotateY(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes verticalFlipIn {
+    0% {
+        transform: perspective(2000px) rotateX(-90deg);
+        opacity: 0
+    }
+
+    to {
+        transform: perspective(2000px) rotateX(0deg);
+        opacity: 1
+    }
+}
+
+@keyframes horizontalFlipOut {
+    0% {
+        transform: perspective(2000px) rotateY(0deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(2000px) rotateY(90deg);
+        opacity: 0
+    }
+}
+
+@keyframes verticalFlipOut {
+    0% {
+        transform: perspective(2000px) rotateX(0deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(2000px) rotateX(-90deg);
+        opacity: 0
+    }
+}
+
+.scale.transition.in {
+    animation-name: scaleIn
+}
+
+.scale.transition.out {
+    animation-name: scaleOut
+}
+
+@keyframes scaleIn {
+    0% {
+        opacity: 0;
+        transform: scale(.8)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes scaleOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.9)
+    }
+}
+
+.transition.fly {
+    animation-duration: .6s;
+    transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+}
+
+.transition.fly.in {
+    animation-name: flyIn
+}
+
+.transition[class*="fly up"].in {
+    animation-name: flyInUp
+}
+
+.transition[class*="fly down"].in {
+    animation-name: flyInDown
+}
+
+.transition[class*="fly left"].in {
+    animation-name: flyInLeft
+}
+
+.transition[class*="fly right"].in {
+    animation-name: flyInRight
+}
+
+.transition.fly.out {
+    animation-name: flyOut
+}
+
+.transition[class*="fly up"].out {
+    animation-name: flyOutUp
+}
+
+.transition[class*="fly down"].out {
+    animation-name: flyOutDown
+}
+
+.transition[class*="fly left"].out {
+    animation-name: flyOutLeft
+}
+
+.transition[class*="fly right"].out {
+    animation-name: flyOutRight
+}
+
+@keyframes flyIn {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+
+    20% {
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    40% {
+        transform: scale3d(.9, .9, .9)
+    }
+
+    60% {
+        opacity: 1;
+        transform: scale3d(1.03, 1.03, 1.03)
+    }
+
+    80% {
+        transform: scale3d(.97, .97, .97)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}
+
+@keyframes flyInUp {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 1500px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0)
+    }
+
+    75% {
+        transform: translate3d(0, 10px, 0)
+    }
+
+    90% {
+        transform: translate3d(0, -5px, 0)
+    }
+
+    to {
+        transform: translateZ(0)
+    }
+}
+
+@keyframes flyInDown {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -1500px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0)
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0)
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyInLeft {
+    0% {
+        opacity: 0;
+        transform: translate3d(1500px, 0, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(-25px, 0, 0)
+    }
+
+    75% {
+        transform: translate3d(10px, 0, 0)
+    }
+
+    90% {
+        transform: translate3d(-5px, 0, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyInRight {
+    0% {
+        opacity: 0;
+        transform: translate3d(-1500px, 0, 0)
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(25px, 0, 0)
+    }
+
+    75% {
+        transform: translate3d(-10px, 0, 0)
+    }
+
+    90% {
+        transform: translate3d(5px, 0, 0)
+    }
+
+    to {
+        transform: none
+    }
+}
+
+@keyframes flyOut {
+    20% {
+        transform: scale3d(.9, .9, .9)
+    }
+
+    50%,
+    55% {
+        opacity: 1;
+        transform: scale3d(1.1, 1.1, 1.1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3)
+    }
+}
+
+@keyframes flyOutUp {
+    20% {
+        transform: translate3d(0, 10px, 0)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, -20px, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, 2000px, 0)
+    }
+}
+
+@keyframes flyOutDown {
+    20% {
+        transform: translate3d(0, -10px, 0)
+    }
+
+    40%,
+    45% {
+        opacity: 1;
+        transform: translate3d(0, 20px, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(0, -2000px, 0)
+    }
+}
+
+@keyframes flyOutRight {
+    20% {
+        opacity: 1;
+        transform: translate3d(20px, 0, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(-2000px, 0, 0)
+    }
+}
+
+@keyframes flyOutLeft {
+    20% {
+        opacity: 1;
+        transform: translate3d(-20px, 0, 0)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate3d(2000px, 0, 0)
+    }
+}
+
+.transition.slide.in,
+.transition[class*="slide down"].in {
+    animation-name: slideInY;
+    transform-origin: top center
+}
+
+.transition[class*="slide up"].in {
+    animation-name: slideInY;
+    transform-origin: bottom center
+}
+
+.transition[class*="slide left"].in {
+    animation-name: slideInX;
+    transform-origin: center right
+}
+
+.transition[class*="slide right"].in {
+    animation-name: slideInX;
+    transform-origin: center left
+}
+
+.transition.slide.out,
+.transition[class*="slide down"].out {
+    animation-name: slideOutY;
+    transform-origin: top center
+}
+
+.transition[class*="slide up"].out {
+    animation-name: slideOutY;
+    transform-origin: bottom center
+}
+
+.transition[class*="slide left"].out {
+    animation-name: slideOutX;
+    transform-origin: center right
+}
+
+.transition[class*="slide right"].out {
+    animation-name: slideOutX;
+    transform-origin: center left
+}
+
+@keyframes slideInY {
+    0% {
+        opacity: 0;
+        transform: scaleY(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleY(1)
+    }
+}
+
+@keyframes slideInX {
+    0% {
+        opacity: 0;
+        transform: scaleX(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+}
+
+@keyframes slideOutY {
+    0% {
+        opacity: 1;
+        transform: scaleY(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleY(0)
+    }
+}
+
+@keyframes slideOutX {
+    0% {
+        opacity: 1;
+        transform: scaleX(1)
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleX(0)
+    }
+}
+
+.transition.swing {
+    animation-duration: .8s
+}
+
+.transition[class*="swing down"].in {
+    animation-name: swingInX;
+    transform-origin: top center
+}
+
+.transition[class*="swing up"].in {
+    animation-name: swingInX;
+    transform-origin: bottom center
+}
+
+.transition[class*="swing left"].in {
+    animation-name: swingInY;
+    transform-origin: center right
+}
+
+.transition[class*="swing right"].in {
+    animation-name: swingInY;
+    transform-origin: center left
+}
+
+.transition.swing.out,
+.transition[class*="swing down"].out {
+    animation-name: swingOutX;
+    transform-origin: top center
+}
+
+.transition[class*="swing up"].out {
+    animation-name: swingOutX;
+    transform-origin: bottom center
+}
+
+.transition[class*="swing left"].out {
+    animation-name: swingOutY;
+    transform-origin: center right
+}
+
+.transition[class*="swing right"].out {
+    animation-name: swingOutY;
+    transform-origin: center left
+}
+
+@keyframes swingInX {
+    0% {
+        transform: perspective(1000px) rotateX(90deg);
+        opacity: 0
+    }
+
+    40% {
+        transform: perspective(1000px) rotateX(-30deg);
+        opacity: 1
+    }
+
+    60% {
+        transform: perspective(1000px) rotateX(15deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateX(-7.5deg)
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+}
+
+@keyframes swingInY {
+    0% {
+        transform: perspective(1000px) rotateY(-90deg);
+        opacity: 0
+    }
+
+    40% {
+        transform: perspective(1000px) rotateY(30deg);
+        opacity: 1
+    }
+
+    60% {
+        transform: perspective(1000px) rotateY(-17.5deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateY(7.5deg)
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(0deg)
+    }
+}
+
+@keyframes swingOutX {
+    0% {
+        transform: perspective(1000px) rotateX(0deg)
+    }
+
+    40% {
+        transform: perspective(1000px) rotateX(-7.5deg)
+    }
+
+    60% {
+        transform: perspective(1000px) rotateX(17.5deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateX(-30deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(1000px) rotateX(90deg);
+        opacity: 0
+    }
+}
+
+@keyframes swingOutY {
+    0% {
+        transform: perspective(1000px) rotateY(0deg)
+    }
+
+    40% {
+        transform: perspective(1000px) rotateY(7.5deg)
+    }
+
+    60% {
+        transform: perspective(1000px) rotateY(-10deg)
+    }
+
+    80% {
+        transform: perspective(1000px) rotateY(30deg);
+        opacity: 1
+    }
+
+    to {
+        transform: perspective(1000px) rotateY(-90deg);
+        opacity: 0
+    }
+}
+
+.transition.zoom.in {
+    animation-name: zoomIn
+}
+
+.transition.zoom.out {
+    animation-name: zoomOut
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 1;
+        transform: scale(0)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+@keyframes zoomOut {
+    0% {
+        opacity: 1;
+        transform: scale(1)
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(0)
+    }
+}
+
+.flash.transition {
+    animation-duration: .75s;
+    animation-name: flash
+}
+
+.shake.transition {
+    animation-duration: .75s;
+    animation-name: shake
+}
+
+.bounce.transition {
+    animation-duration: .75s;
+    animation-name: bounce
+}
+
+.tada.transition {
+    animation-duration: .75s;
+    animation-name: tada
+}
+
+.pulse.transition {
+    animation-duration: .5s;
+    animation-name: pulse
+}
+
+.jiggle.transition {
+    animation-duration: .75s;
+    animation-name: jiggle
+}
+
+.transition.glow {
+    animation-duration: 2s;
+    animation-timing-function: cubic-bezier(.19, 1, .22, 1);
+    animation-name: glow
+}
+
+@keyframes flash {
+
+    0%,
+    50%,
+    to {
+        opacity: 1
+    }
+
+    25%,
+    75% {
+        opacity: 0
+    }
+}
+
+@keyframes shake {
+
+    0%,
+    to {
+        transform: translateX(0)
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-10px)
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(10px)
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    to {
+        transform: translateY(0)
+    }
+
+    40% {
+        transform: translateY(-30px)
+    }
+
+    60% {
+        transform: translateY(-15px)
+    }
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1)
+    }
+
+    10%,
+    20% {
+        transform: scale(.9) rotate(-3deg)
+    }
+
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale(1.1) rotate(3deg)
+    }
+
+    40%,
+    60%,
+    80% {
+        transform: scale(1.1) rotate(-3deg)
+    }
+
+    to {
+        transform: scale(1) rotate(0)
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1
+    }
+
+    50% {
+        transform: scale(.9);
+        opacity: .7
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+@keyframes jiggle {
+    0% {
+        transform: scaleX(1)
+    }
+
+    30% {
+        transform: scale3d(1.25, .75, 1)
+    }
+
+    40% {
+        transform: scale3d(.75, 1.25, 1)
+    }
+
+    50% {
+        transform: scale3d(1.15, .85, 1)
+    }
+
+    65% {
+        transform: scale3d(.95, 1.05, 1)
+    }
+
+    75% {
+        transform: scale3d(1.05, .95, 1)
+    }
+
+    to {
+        transform: scaleX(1)
+    }
+}
+
+@keyframes glow {
+    0% {
+        background-color: #fcfcfd
+    }
+
+    30% {
+        background-color: #fff6cd
+    }
+
+    to {
+        background-color: #fcfcfd
+    }
+}
+
+@font-face {
+    font-family: Rating;
+    src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype"), url(data:application/font-woff;charset=utf-8;base64,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kIiRi5MI5vdUFfcni4vCBYufhJx8mn2ZepJ3i3aLeoR9fX18g3qLdwiLVAUO+yaLshWL+AQFi5GNkY+RjpCQj5KNj42PjI+LCPfAiwWPi4+Kj4mRiZCHj4aPhY2Fi4UIi/wEBYuEiYWHhoeGhoeFiIiKhoqHi4GLhI6EkQj7EvcN+xL7DQWEhYOIgouHi4eLh42EjoaPiJCHkImRi5IIDov3XRWLko2Rj5Kltq+vuKW4pbuZvYu9i7t9uHG4ca9npWCPhI2Fi4SLhYmEh4RxYGdoXnAIXnFbflmLWYtbmF6lXqZnrnG2h5KJkouRCLCLFaRkq2yxdLF0tH+4i7iLtJexorGiq6qksm64Z61goZZ3kXaLdItnfm1ycnJybX9oiwhoi22XcqRypH6pi6+LopGglp9gdWdpbl4I9xiwFYuHjIiOiI6IjoqPi4+LjoyOjo2OjY6Lj4ubkJmXl5eWmZGbi4+LjoyOjo2OjY6LjwiLj4mOiY6IjYiNh4tzi3eCenp6eoJ3i3MIDov3XRWLko2Sj5GouK+utqW3pbqYvouci5yJnIgIm6cFjY6NjI+LjIuNi42JjYqOio+JjomOiY6KjomOiY6JjoqNioyKjomMiYuHi4qLiouLCHdnbVVjQ2NDbVV3Zwh9cgWJiIiJiIuJi36SdJiIjYmOi46LjY+UlJlvl3KcdJ90oHeie6WHkYmSi5IIsIsVqlq0Z711CKGzBXqXfpqCnoKdhp6LoIuikaCWn2B1Z2luXgj3GLAVi4eMiI6IjoiOio+Lj4uOjI6OjY6NjouPi5uQmZeXl5aZkZuLj4uOjI6OjY6NjouPCIuPiY6JjoiNiI2Hi3OLd4J6enp6gneLcwji+10VoLAFtI+wmK2hrqKnqKKvdq1wp2uhCJ2rBZ1/nHycepx6mHqWeY+EjYWLhIuEiYWHhIR/gH1+fG9qaXJmeWV5Y4Jhiwi53BXb9yQFjIKMg4uEi3CDc3x1fHV3fHOBCA6L1BWL90sFi5WPlJKSkpKTj5aLCNmLBZKPmJqepJaZlZeVlY+Qj5ONl42WjpeOmI+YkZWTk5OSk46Vi5uLmYiYhZiFlIGSfgiSfo55i3WLeYd5gXgIvosFn4uchJl8mn2Seot3i3qGfIJ9jYSLhYuEi3yIfoR+i4eLh4uHi3eGen99i3CDdnt8CHt8dYNwiwhmiwV5i3mNeY95kHeRc5N1k36Ph4sIOYsFgIuDjoSShJKHlIuVCLCdFYuGjIePiI+Hj4mQi5CLj42Pj46OjY+LkIuQiZCIjoePh42Gi4aLh4mHh4eIioaLhgjUeRWUiwWNi46Lj4qOi4+KjYqOi4+Kj4mQio6KjYqNio+Kj4mQio6KjIqzfquEpIsIrosFr4uemouri5CKkYqQkY6QkI6SjpKNkouSi5KJkoiRlZWQlouYi5CKkImRiZGJj4iOCJGMkI+PlI+UjZKLkouViJODk4SSgo+CiwgmiwWLlpCalJ6UnpCbi5aLnoiYhJSFlH+QeYuGhoeDiYCJf4h/h3+IfoWBg4KHh4SCgH4Ii4qIiYiGh4aIh4mIiIiIh4eGh4aHh4eHiIiHiIeHiIiHiIeKh4mIioiLCIKLi/tLBQ6L90sVi/dLBYuVj5OSk5KSk46WiwjdiwWPi5iPoZOkk6CRnZCdj56Nn4sIq4sFpougg5x8m3yTd4txCIuJBZd8kHuLd4uHi4eLh5J+jn6LfIuEi4SJhZR9kHyLeot3hHp8fH19eoR3iwhYiwWVeI95i3mLdIh6hH6EfoKBfoV+hX2He4uBi4OPg5KFkYaTh5SHlYiTipOKk4qTiJMIiZSIkYiPgZSBl4CaeKR+moSPCD2LBYCLg4+EkoSSh5SLlQiw9zgVi4aMh4+Ij4ePiZCLkIuPjY+Pjo6Nj4uQi5CJkIiOh4+HjYaLhouHiYeHh4iKhouGCNT7OBWUiwWOi46Kj4mPio+IjoiPh4+IjoePiI+Hj4aPho6HjoiNiI6Hj4aOho6Ii4qWfpKDj4YIk4ORgY5+j36OgI1/jYCPg5CGnYuXj5GUkpSOmYuei5aGmoKfgp6GmouWCPCLBZSLlI+SkpOTjpOLlYuSiZKHlIeUho+Fi46PjY+NkY2RjJCLkIuYhpaBlY6RjZKLkgiLkomSiJKIkoaQhY6MkIyRi5CLm4aXgpOBkn6Pe4sIZosFcotrhGN9iouIioaJh4qHiomKiYqIioaKh4mHioiKiYuHioiLh4qIi4mLCIKLi/tLBQ77lIv3txWLkpCPlo0I9yOgzPcWBY6SkI+RiwiL/BL7FUcFh4mHioiLh4uIjImOiY6KjouPi4yLjYyOCKP3IyPwBYaQiZCLjwgOi/fFFYu1l6yjoqOjrZe2i5aLl4mYh5eHloWWhJaElIWShZOE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) format("woff");
+    font-weight: 400;
+    font-style: normal
+}
+
+.ui.rating .icon {
+    font-family: Rating;
+    line-height: 1;
+    backface-visibility: hidden;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center
+}
+
+.ui.rating .active.icon:before,
+.ui.rating .icon:before,
+.ui.star.rating .active.icon:before,
+.ui.star.rating .icon:before {
+    content: "\F005"
+}
+
+.ui.star.rating .partial.icon:before {
+    content: "\F006"
+}
+
+.ui.star.rating .partial.icon {
+    content: "\F005"
+}
+
+.ui.heart.rating .active.icon:before,
+.ui.heart.rating .icon:before {
+    content: "\F004"
+}
+
+.ui.striped.table>tr:nth-child(2n) table,
+.ui.striped.table tbody tr:nth-child(2n) table {
+    background-color: #eaeff1
+}
+
+.ui.striped.table>tr:nth-child(2n-1) table,
+.ui.striped.table tbody tr:nth-child(2n-1) table,
+.ui.striped.table tbody tr:nth-child(2n-1) table tr {
+    background-color: #fff !important
+}
+
+.ui.celled.table tr.border-bottom-line td {
+    border-bottom: 2px solid #bababd
+}

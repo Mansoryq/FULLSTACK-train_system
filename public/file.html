@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Спасибо что выбрали TABDRN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 600px;
+            color: #000;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Спасибо что выбрали TABDRN</h1>
+        <form id="emailForm">
+            <input type="email" id="email" placeholder="Введите вашу почту" required>
+            <br>
+            <button type="submit">Отправить файл</button>
+            <br>
+            <br>
+            <button type="button" onclick="window.location.href='index.html'">
+                Басты бетке оралу
+            </button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("emailForm").addEventListener("submit", async function (event) {
+            event.preventDefault();
+            
+            const email = document.getElementById("email").value;
+            if (!email) {
+                alert("Введите email!");
+                return;
+            }
+
+            const response = await fetch("/send-email", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ email }),
+            });
+
+            const result = await response.json();
+            alert(result.message);
+        });
+    </script>
+</body>
+</html>
