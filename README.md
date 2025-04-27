@@ -4,9 +4,9 @@
 
 **Train Booking System** is a web application for  **booking train tickets** **, built with ** **JavaScript, HTML, and CSS** **.**
 
-**Users can ** **select seats, make payments, manage bookings, and provide feedback** **.**
+Users can **select seats, make payments, manage bookings, and provide feedback** **.**
 
-**After a successful booking, the system ****automatically sends a digital ticket copy to the user’s email** using  **Mailgun** **.**
+After a successful booking, the system **automatically sends a digital ticket copy to the user’s email** using  **Mailgun** **.**
 
 
 ---
@@ -93,7 +93,7 @@ Or simply open **index.html** in a browser if the project is **frontend-only**.
 
 🚀 Improve **mobile responsiveness** for better usability.
 
-**🚀 Support ** **multiple payment options** **.**
+🚀 Support  **multiple payment options** **.**
 
 ---
 
